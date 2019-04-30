@@ -9,5 +9,5 @@ RUN sed -i 's/^enabled=false/enabled=true/' /defaults/qBittorrent.conf
 RUN sed -i 's/^program=/program=\/on_download_finish.sh/' /defaults/qBittorrent.conf
 RUN sed -i 's/^Downloads\\TempPath/Downloads\\TempPathEnabled=true\nDownloads\\TempPath/' /defaults/qBittorrent.conf
 RUN sed -i 's/^Downloads\\SavePath=\/downloads\//Downloads\\SavePath=\/downloads\/complete\//' /defaults/qBittorrent.conf
-
+RUN mkdir -p /logs
 
